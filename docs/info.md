@@ -9,12 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+Calculates a running error correcting code. For each new byte applied to the input pins, calculates a running longitudinal redundancy code.
 
 ## How to test
 
-Explain how to use your project
+Supply a byte to `ui_in`, read the LRC on `uo_out`. Keep feeding it bytes and you'll keep getting new LRC codes. Code resets when the board resets.
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+No external hardware needed.
