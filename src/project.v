@@ -22,7 +22,6 @@ module tt_um_lrc_stevej (
   assign uio_out = 0;
   assign uio_oe  = 0;
 
-
 lrc lrc0(
   .clk(clk),
   .rst_n(rst_n),
