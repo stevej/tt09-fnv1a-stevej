@@ -13,9 +13,6 @@ module lrc(
 logic [7:0] lrc;
 logic [7:0] last_in_seen;
 
-// An internal debug value.
-logic lrc_updated;
-
 assign out = lrc;
 
 /**
@@ -28,17 +25,14 @@ assign out = lrc;
 always @(posedge clk) begin
     if (!rst_n) begin
         lrc <= 8'b0;
-        lrc_updated <= '0;
         last_in_seen <= '0;
     end else begin
         // We only update when the input changes. This could
         // be a bug or a feature depending on how generous
         // you feel about the author.
         if (in != last_in_seen && in != 8'b0) begin
-            lrc_updated <= '1;
             lrc <= (((lrc + in) & 8'hFF) ^ 8'hFF) & 8'hFF;
         end else begin
-            lrc_updated <= '0;
             lrc <= lrc;
         end
         last_in_seen <= in;
