@@ -13,7 +13,7 @@ Calculates a running error correcting code. For each new byte applied to the inp
 
 ## How to test
 
-Supply a byte to `ui_in`, read the LRC on `uo_out`. Keep feeding it bytes and you'll keep getting new LRC codes. Code resets when the board resets.
+Supply a byte to `ui_in`, read the LRC on `uo_out`. Keep feeding it bytes and you'll keep getting new LRC codes. Code resets when the chip resets.
 
 ## External hardware
 
