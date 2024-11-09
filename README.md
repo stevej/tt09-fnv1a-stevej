@@ -1,5 +1,9 @@
 ![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/test/badge.svg) ![](../../workflows/fpga/badge.svg)
 
+# Rolling Longitudinal redundancy check generator.
+
+As long as you feed new bytes (new meaning is different from the last seen byte) into `ui_in`, you will see the latest LRC code on `uo_out`.
+
 # Tiny Tapeout Verilog Project Template
 
 - [Read the documentation for project](docs/info.md)
